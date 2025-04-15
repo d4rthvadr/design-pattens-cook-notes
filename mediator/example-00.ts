@@ -48,7 +48,7 @@ class User {
   id: string;
   name: string;
 
-  private mediator: ChatMediator;
+  private mediator: ChatMediator | undefined;
 
   constructor(id: string, name: string) {
     this.id = id;
@@ -61,7 +61,7 @@ class User {
   }
 
   send(message: string) {
-    this.mediator.sendMessage(message, this.id);
+    this.mediator?.sendMessage(message, this.id);
   }
 
   receive(message: string) {

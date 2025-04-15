@@ -3,7 +3,7 @@ import * as fs from "fs";
 class Journal {
   static count = 0;
 
-  private entries = {};
+  private entries: Record<number, unknown> = {};
 
   addEntry(text: string) {
     const c = ++Journal.count;

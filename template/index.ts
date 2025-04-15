@@ -13,13 +13,13 @@ abstract class Game {
     console.log(`Player ${this.winningPlayer} wins`);
   }
 
-  abstract get hasWinner();
+  abstract get hasWinner(): boolean;
 
-  abstract get winningPlayer();
+  abstract get winningPlayer(): number;
 
-  abstract start();
+  abstract start(): void;
 
-  abstract takeTurn();
+  abstract takeTurn(): void;
 }
 
 class Chess extends Game {

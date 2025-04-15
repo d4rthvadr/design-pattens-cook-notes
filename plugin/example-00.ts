@@ -17,7 +17,7 @@ class XPLogger implements WidgetPlugin {
 
 class PluginManager {
   plugins: Record<string, WidgetPlugin> = {};
-  markdownEditor: MarkdownEditor;
+  markdownEditor?: MarkdownEditor;
 
   register(plugin: WidgetPlugin): void {
     if (this.plugins[plugin.name]) {

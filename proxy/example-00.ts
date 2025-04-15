@@ -17,7 +17,7 @@ class RealImage implements Image {
 }
 
 class ProxyImage implements Image {
-  private realImage: RealImage;
+  private realImage?: RealImage;
 
   constructor(private filename: string) {}
 
@@ -47,7 +47,7 @@ class RealDataService implements DataService {
   }
 }
 class ProxyDataService implements DataService {
-  private realDataService: RealDataService;
+  private realDataService?: RealDataService;
 
   constructor(private user: { role: string }) {}
   isAdmin(): boolean {

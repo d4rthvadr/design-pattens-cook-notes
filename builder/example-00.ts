@@ -66,12 +66,10 @@ class Character {
 }
 
 class CharacterBuilder {
-  #name: string;
-  #race: Race;
-  #classType: CharacterClass;
+  #name!: string;
+  #race!: Race;
+  #classType!: CharacterClass;
   #weapons?: Weapons[];
-
-  constructor() {}
 
   setName(name: string): this {
     this.#name = name;
